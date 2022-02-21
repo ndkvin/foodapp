@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/home/food_page_body.dart';
+import 'package:foodapp/pages/home/food_page_body.dart';
 import 'package:foodapp/utils/colors.dart';
+import 'package:foodapp/utils/dimensions.dart';
 import 'package:foodapp/widget/big_text.dart';
 import 'package:foodapp/widget/small_text.dart';
 
@@ -18,11 +19,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
       body: Column(
         children: [
           Container(
-            margin: const EdgeInsets.only(
-              top: 40,
-              left: 20,
-              right: 20,
-              bottom: 25
+            margin: EdgeInsets.only(
+              top: Dimensions.height40,
+              left: Dimensions.width20,
+              right: Dimensions.width20,
+              bottom: Dimensions.height25
             ),
             child: Container(
               child: Row(
@@ -47,17 +48,17 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
+                      padding: EdgeInsets.all(Dimensions.height10),
                       decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(10)
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(Dimensions.height10)
                         ),
                         color: Colors.blue[300],
                       ),
                       child: Icon(
                         Icons.search,
                         color: AppColors.mainColor,
+                        size: Dimensions.height24,
                       ),
                     ),
                   )
@@ -65,7 +66,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
-          FoodPageBody(),
+          const Expanded(
+            child: SingleChildScrollView(
+              child: FoodPageBody(),
+            ),
+          ),
         ],
       )
     );

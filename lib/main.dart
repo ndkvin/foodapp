@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/home/main_food_page.dart';
+import 'package:foodapp/pages/food/popular_food_detail.dart';
+import 'package:foodapp/pages/home/main_food_page.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Food App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
       ),
-      home: const MainFoodPage(),
+      home: const PopularFoodDetail(),
     );
   }
 }
