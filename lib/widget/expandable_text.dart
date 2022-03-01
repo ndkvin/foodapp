@@ -42,7 +42,8 @@ class _ExpandableTextState extends State<ExpandableText> {
         children: [
           SmallText(
             text: hiddenText ? (firstHalf + '...') : (firstHalf+secondHalf),
-            size: Dimensions.height16,  
+            size: Dimensions.height16,
+            color: AppColors.paraColor,
           ),
           InkWell(
             onTap: () {
@@ -55,7 +56,7 @@ class _ExpandableTextState extends State<ExpandableText> {
                 hiddenText ? SmallText(
                   text: 'Show more',
                   size: Dimensions.height16,  
-                  color: AppColors.paraColor,
+                  color: AppColors.mainColor
                 ) : SmallText(
                   text: 'Show less',
                   size: Dimensions.height16,  

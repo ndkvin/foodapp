@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       title: 'Food App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: const PopularFoodDetail(),
